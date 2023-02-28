@@ -1,21 +1,15 @@
-import {
-  Grid,
-  Paper,
-  Avatar,
-  TextField,
-  Button,
-  Typography,
-  Link,
-} from "@material-ui/core";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { useFormik } from "formik";
 import React, { useContext } from "react";
 import { toast, Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { API } from "../Global";
 import * as yup from "yup";
 import axios from "axios";
 import UserContext from "../context/UserContext";
+import { Avatar, Button, TextField, Typography } from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 const loginValidationSchema = yup.object({
   username: yup.string().required().min(4),
@@ -113,11 +107,11 @@ const Login = () => {
             </Button>
           </form>
           <Typography className="text-center p-2">
-            <Link href="forgot-password">Forgot password ?</Link>
+            <Link to="/forgot-password">Forgot password ?</Link>
           </Typography>
           <Typography className="text-center p-2">
             Do you have an account ?
-            <Link href="/register" className="mx-2 fw-bold">
+            <Link to="/register" className="mx-2 fw-bold">
               Sign Up
             </Link>
           </Typography>

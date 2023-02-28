@@ -5,7 +5,9 @@ import { API } from "../Global";
 import { useFormik } from "formik";
 import { toast, Toaster } from "react-hot-toast";
 import UserContext from "../context/UserContext";
-import { Button, Grid, Paper, TextField } from "@material-ui/core";
+import { Button, TextField } from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 import * as yup from "yup";
 
 const loginValidationSchema = yup.object({

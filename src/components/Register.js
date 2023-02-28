@@ -1,15 +1,10 @@
-import {
-  Grid,
-  Paper,
-  TextField,
-  Button,
-  Typography,
-  Link,
-} from "@material-ui/core";
+import { Button, TextField, Typography } from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 import { useFormik } from "formik";
 import React from "react";
 import { toast, Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { API } from "../Global";
 import * as yup from "yup";
 import axios from "axios";
@@ -112,9 +107,8 @@ const Register = () => {
           </Button>
         </form>
         <Typography className="text-center p-2">
-          {" "}
           Already have an account ?
-          <Link href="/" className="mx-2 fw-bold">
+          <Link to="/" className="mx-2 fw-bold">
             Sign In
           </Link>
         </Typography>

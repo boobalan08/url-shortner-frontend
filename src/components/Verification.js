@@ -5,7 +5,9 @@ import UserContext from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { API } from "../Global";
 import { toast, Toaster } from "react-hot-toast";
-import { Button, Grid, Paper, TextField } from "@material-ui/core";
+import { Button, TextField } from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 import * as yup from "yup";
 
 const loginValidationSchema = yup.object({
